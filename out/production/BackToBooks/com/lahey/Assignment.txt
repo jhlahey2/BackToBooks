@@ -1,0 +1,33 @@
+Create an application to keep track of books. Yes. Again.
+
+But this time, you'll also keep track of the authors of the books. The authors will have the following:
+
+- First Name
+
+- Last Name
+
+- Email address
+
+- Phone number
+
+
+
+Books will have the following:
+
+- Title
+
+- ISBN
+
+- Author
+
+
+
+Your application should allow a user to:
+
+* Create a new book. The book does not have to have an author, but if it does, the author should be selected from a pre-existing list.
+
+* Create an author. When an author is created, as many books as a user would like can be added to that author. The title of the book and ISBN should be required. The book will have only one author for our purposes.
+
+* Add a book to an author
+
+* List all authors and the books that they wrote
