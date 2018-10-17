@@ -10,7 +10,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //hashmap ensure that each book has only one author
+        //hashmap to ensure that each book has only one author
         HashMap<Book, Author> bookAuthorMap = new HashMap<Book, Author>();
         ArrayList<Author> authorList = new ArrayList<Author>();
         ArrayList<Book> bookList = new ArrayList<Book>();
@@ -168,18 +168,10 @@ public class Main {
                         if(author.getAuthorID() == iInputAuthorID){
 
                             foundAuthor = author;
-                            Author temp = bookAuthorMap.put(foundBook, foundAuthor);
-
-                            if( !(temp == null) ) {
-
-                                foundAuthor.addToBooksWritten(foundBook);
-                                System.out.printf("Book %s has been linked to Author %s %s",
-                                        foundBook.getTitle(), foundAuthor.getFirstName(), foundAuthor.getLastName());
-                            }
-                            else{
-
-                                System.out.println("Something bad happened.");
-                            }
+                            bookAuthorMap.put(foundBook, foundAuthor);
+                            foundAuthor.addToBooksWritten(foundBook);
+                            System.out.printf("Book %s has been linked to Author %s %s",
+                                    foundBook.getTitle(), foundAuthor.getFirstName(), foundAuthor.getLastName());
 
                         }//end if(author.getAuthorID() == iInputAuthorID)
 
@@ -239,10 +231,11 @@ public class Main {
                     prefix = ", ";
                 }
                 System.out.println(buffer.toString());
-                System.out.println("\n");
             }
+            System.out.println("\n");
         }
     }//end public static void listAllAuthors()
+
 
     public static void listAllBooks(ArrayList<Book> bookList) {
 
